@@ -1,0 +1,353 @@
+body {
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+}
+
+a:link, a:visited, a:focus{ color: inherit; text-decoration: none; }
+a:hover{ color: inherit; text-decoration: none; }
+a:active{ color: inherit; text-decoration: none; }
+
+/*formatacao do topo*/
+
+.topo {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 9999;
+}
+
+.topo h2 {
+  max-width: 320px;
+  font-weight: bolder;
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.topo header {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #2c3e50;
+}
+
+.menu {
+  width: 100%;
+  max-width: 320px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.menu ul li {
+  float: left;
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*fim da formatacao do topo*/
+
+/*formatacao do perfil*/
+.perfil,
+.perfil .content,
+.portifolio,
+.portifolio .content,
+.about,
+.about .content,
+.contact,
+.contact .content {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  padding-top: 80px;
+}
+
+.perfil .content {
+  background-color: #18bc9c;
+}
+
+.perfil .content .mascara-imagem {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 256px;
+  height: 256px;
+  margin: 0 auto;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.perfil .content h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.5em;
+}
+
+.perfil .content hr {
+  border: 0;
+  background-color: #fff;
+  height: 5px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.perfil .content h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+/*fim da formatacao do perfil*/
+
+/*formatacao da secao de portifolio*/
+.portifolio,
+.portifolio .content {
+  background-color: #fff;
+  text-align: center;
+}
+
+.portifolio .content {
+  display: table;
+  height: 100%;
+}
+
+.portifolio .title {
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.6em;
+  margin: 0 0 35px;
+}
+
+.portifolio hr {
+  border: 3px solid  #2c3e50;
+  width: 250px;
+}
+
+.portifolio .content .box-image {
+  width: 100%;
+  max-width: 360px;
+  /*margin: 15px;*/
+  padding: 15px;
+  display: inline-block;
+  /*position: relative;*/
+  /*adicionado*/
+  box-sizing: border-box;
+}
+
+/* adicionado */
+.portifolio .content .box-image .box-image-content {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.portifolio .content .box-image img {
+  width: 100%;
+}
+
+.portifolio .content .box-image .mascara {
+  position: absolute;
+  /*width: 100%;
+  height: 100%;
+  max-height: 260px;*/
+  width: 100%;
+  height: 99%;
+  display: none;
+  cursor: pointer;
+  background-color: rgba(24, 188, 156, 0.62);
+  /*top: 0;*/
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.portifolio .content .box-image .mascara img {
+  width: 23%;
+  margin-top: 25%;
+}
+
+.portifolio .content .box-image .box-image-content:hover .mascara {
+  display: block;
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/*fim da formatação do portifolio*/
+
+@media screen and (max-width: 1199px){
+  .portifolio .content .box-image {
+    max-width: 293px;
+  }
+
+  .portifolio .content .box-image .mascara {
+    max-height: 212px;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .portifolio .content .box-image {
+    max-width: 220px;
+  }
+
+  .portifolio .content .box-image .mascara {
+    max-height: 159px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .portifolio .content .box-image {
+    max-width: 400px;
+  }
+
+  .portifolio .content .box-image .mascara {
+    max-height: 289px;
+  }
+}
+
+/*formatação da seção about*/
+.about {
+  background: #18bc9c;
+  text-align: center;
+  color: #fff;
+}
+
+.about .content {
+  display: table;
+  height: 100%;
+  width: 100%;
+  min-height: 600px;
+}
+
+.about .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.6em;
+  margin: 0 0 35px;
+}
+
+.about hr {
+  border: 3px solid  #fff;
+  width: 250px;
+}
+
+.about .text {
+  display: table;
+  margin: 0 auto;
+}
+
+.about .text .col-text {
+  max-width: 350px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 1.2em;
+  float: left;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1199px){
+  .about .text .col-text {
+    float: none;
+    max-width: 940px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .about .text .col-text {
+    max-width: 720px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .about .text .col-text {
+  }
+}
+/*fim da formatação da seção About*/
+
+/*formatação da seção de Contato*/
+.contact {
+}
+
+.contact .title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.6em;
+  margin: 0 0 35px;
+}
+
+.contact hr {
+  border: 3px solid  #2c3e50;
+  width: 250px;
+}
+
+.contact .form {
+  display: block;
+  max-width: 600px;
+  margin: 25px auto;
+}
+
+.contact .form input,
+.contact .form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 0 15px 15px;
+  border-top: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.contact .form input:focus,
+.contact .form textarea:focus {
+  outline: none;
+}
+
+.contact .form input,
+.contact .form input:placeholder-shown{
+  font-size: 1.2em;
+}
+
+.contact .form textarea,
+.contact .form textarea:placeholder-shown {
+  height: 200px;
+  font-family: Arial;
+  font-size: 1.3em;
+  border-bottom: 1px solid #ddd;
+  resize: none;
+}
+
+.contact .form button {
+  background-color: #18bc9c;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0 0 15px;
+}
+
+.contact .form button:hover {
+  background-color: #128f76;
+}
