@@ -307,16 +307,24 @@ a:active{ color: inherit; text-decoration: none; }
   margin: 25px auto;
 }
 
-.contact .form input,
-.contact .form textarea {
+.contact .form .formInput ul,
+.contact .form .formMsg ul {
+  display: none;
+  font-size: 1.1em;
+  color: #444;
+  margin: 0;
+}
+
+.contact .formInput,
+.contact .formMsg {
   display: block;
   width: 100%;
-  box-sizing: border-box;
-  padding: 25px 0 15px 15px;
+  padding: 25px 0 0 15px;
   border-top: 1px solid #ddd;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
+}
+
+.contact .formMsg {
+  border-bottom: 1px solid  #ddd;
 }
 
 .contact .form input:focus,
@@ -327,15 +335,19 @@ a:active{ color: inherit; text-decoration: none; }
 .contact .form input,
 .contact .form input:placeholder-shown{
   font-size: 1.2em;
+  border: none;
+  width: 100%;
 }
 
 .contact .form textarea,
 .contact .form textarea:placeholder-shown {
   height: 200px;
+  width: 100%;
   font-family: Arial;
   font-size: 1.3em;
   border-bottom: 1px solid #ddd;
   resize: none;
+  border: none;
 }
 
 .contact .form button {

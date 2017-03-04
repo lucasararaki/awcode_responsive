@@ -115,10 +115,41 @@
         <hr>
         <div class="form">
           <form action="#">
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Email Address" required>
-            <input type="text" placeholder="Phone Number" required>
-            <textarea name="" id="" placeholder="Message" required></textarea>
+            <div class="formInput">
+              <input type="text" placeholder="Name" required>
+              <p class="alert">
+                <ul>
+                  <li>Por favor, insira o nome</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="formInput">
+              <input type="email" placeholder="Email Address" required>
+              <p class="alert">
+                <ul>
+                  <li>Digite um e-mail válido</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="formInput">
+              <input type="tel" placeholder="Phone Number" required>
+              <p class="alert">
+                <ul>
+                  <li>Telfone é necessário</li>
+                </ul>
+              </p>
+            </div>
+
+            <div class="formMsg">
+              <textarea name="" id="" placeholder="Message" required></textarea>
+              <p class="alert">
+                <ul>
+                  <li>Digite sua mensagem</li>
+                </ul>
+              </p>
+            </div>
             <button>Send</button>
           </form>
         </div>
